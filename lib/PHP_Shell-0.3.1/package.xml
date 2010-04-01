@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.9" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>PHP_Shell</name>
+ <channel>pear.php.net</channel>
+ <summary>a interactive PHP Shell</summary>
+ <description>a interactive PHP Shell with tab-completion, inline help and handling of FATAL errors</description>
+ <lead>
+  <name>Jan Kneschke</name>
+  <user>ostborn</user>
+  <email>jan@kneschke.de</email>
+  <active>yes</active>
+ </lead>
+ <date>2006-07-22</date>
+ <time>17:46:46</time>
+ <version>
+  <release>0.3.1</release>
+  <api>0.3.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+ <notes>* added the LoadScript Extension to load and run scripts directly from the shell
+* added more tags 
+* fixed printing of executiong time</notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="" md5sum="8951a4c9a8675c231fadce9036ace900" name="scripts/php-shell.sh" role="script">
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+    <tasks:unixeol />
+   </file>
+   <file baseinstalldir="" md5sum="f19ea58ac07c5fb943ccba41b444a8b2" name="scripts/php-shell.bat" role="script">
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+    <tasks:windowseol />
+   </file>
+   <file baseinstalldir="" md5sum="468dd31047eeeb1bfcc511e982846263" name="scripts/php-shell-cmd.php" role="php" />
+   <file baseinstalldir="" md5sum="96a5c062e619f78f10a654ae577ebc1e" name="PHP/Shell.php" role="php" />
+   <file baseinstalldir="" md5sum="6138d5302f0b7e2953615da33660dc47" name="PHP/Shell/Commands.php" role="php" />
+   <file baseinstalldir="" md5sum="17aec54f96a8815eac1ec0b0c2974027" name="PHP/Shell/Options.php" role="php" />
+   <file baseinstalldir="" md5sum="a1703d20670070f7fde92cb0328cf1d5" name="PHP/Shell/Extensions.php" role="php" />
+   <file baseinstalldir="" md5sum="f200e53994db6cd51750be8c35187676" name="PHP/Shell/Extensions/Autoload.php" role="php" />
+   <file baseinstalldir="" md5sum="218c043450852f21d15b8800409f2ed8" name="PHP/Shell/Extensions/AutoloadDebug.php" role="php" />
+   <file baseinstalldir="" md5sum="e0d49bc38880ae6868c8fee506ed4791" name="PHP/Shell/Extensions/InlineHelp.php" role="php" />
+   <file baseinstalldir="" md5sum="e1455dec158e57239f93cae9787cc3be" name="PHP/Shell/Extensions/VerbosePrint.php" role="php" />
+   <file baseinstalldir="" md5sum="5cd0f1717141e892df0e6364e01320dd" name="PHP/Shell/Extensions/Colour.php" role="php" />
+   <file baseinstalldir="" md5sum="e4b145a1a8797e7c8f68fb4e5c16a424" name="PHP/Shell/Extensions/ExecutionTime.php" role="php" />
+   <file baseinstalldir="" md5sum="f98cb683722cac2716980f5645047b85" name="PHP/Shell/Extensions/Prototypes.php" role="php" />
+   <file baseinstalldir="" md5sum="ad8a09a439d4890e706c588d33d5774d" name="PHP/Shell/Extensions/LoadScript.php" role="php" />
+   <file baseinstalldir="" md5sum="ed01652e92866c7f56a68679bf547210" name="examples/php-shell-cmd.php" role="doc" />
+   <file baseinstalldir="" md5sum="cb9cd57a92de7a27f1208973a3497a39" name="ShellTests.php" role="test" />
+   <file baseinstalldir="" md5sum="f87f3e1282417516769ce740551561d7" name="README" role="doc" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR</name>
+    <channel>pear.php.net</channel>
+    <min>1.4</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>windows</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="php-shell.bat" name="scripts/php-shell.bat" />
+   <install as="php-shell-cmd.php" name="scripts/php-shell-cmd.php" />
+   <ignore name="scripts/php-shell.sh" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <filelist>
+   <install as="php-shell.sh" name="scripts/php-shell.sh" />
+   <install as="php-shell-cmd.php" name="scripts/php-shell-cmd.php" />
+   <ignore name="scripts/php-shell.bat" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>0.3.1</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-29</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes />
+  </release>
+ </changelog>
+ <changelog>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-29</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes />
+  </release>
+  <release>
+   <version>
+    <release>0.2.7</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-25</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>* added :set autoload and :set background</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.6</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-19</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>added colour schemes</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.5</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-15</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>split the command handling in input() into registerCommand() + seperate handlers</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.4</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-15</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>PEARified the package
+	   - converted to PHPDoc DocComments
+	   - added README as text</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.3</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-15</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>added C_* constants to select the colour externally</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.2</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-15</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>support variable functions like Class::$method() and $object-&gt;$method()</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.1</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-15</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>migrated to the PEAR package.xml 2.0 spec and added a &apos;php-shell.sh&apos; script</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2006-05-14</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+   <notes>- the detection of FATAL errors was rewritten and improved
+ - added UnitTests</notes>
+  </release>
+ </changelog>
+</package>
