@@ -3,13 +3,16 @@
 error_reporting(E_ALL);
 set_time_limit(0);
 
-require_once "lib/PHP_Shell-0.3.1/PHP/Shell.php";
-//require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/Autoload.php";
-//require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/AutoloadDebug.php";
-require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/Colour.php";
-require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/ExecutionTime.php";
-//require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/InlineHelp.php";
-//require_once "lib/PHP_Shell-0.3.1/PHP/Shell/Extensions/VerbosePrint.php"
+$include_path = get_include_path() . ':' . dirname(__FILE__) . '/lib/PHP_Shell-0.3.1';
+set_include_path($include_path);
+
+require_once "PHP/Shell.php";
+//require_once "PHP/Shell/Extensions/Autoload.php";
+//require_once "PHP/Shell/Extensions/AutoloadDebug.php";
+require_once "PHP/Shell/Extensions/Colour.php";
+require_once "PHP/Shell/Extensions/ExecutionTime.php";
+//require_once "PHP/Shell/Extensions/InlineHelp.php";
+//require_once "PHP/Shell/Extensions/VerbosePrint.php"
 
 $__shell = new PHP_Shell();
 $__cmd = PHP_Shell_Commands::getInstance();
