@@ -21,3 +21,6 @@ Example usage:
 	>> $count = db_result(db_query("SELECT COUNT(*) FROM users"));
 	(stores value into variable $count)
 	
+
+The PHP\_Shell library is available here:
+<http://jan.kneschke.de/projects/php-shell>
