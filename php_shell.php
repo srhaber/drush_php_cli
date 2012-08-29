@@ -30,7 +30,11 @@ while($__shell->input()) {
       ## we have a full command, execute it
       $__shell_retval = eval($__shell->getCode()); 
       if (isset($__shell_retval)) {
-        var_export($__shell_retval);
+        // WORKAROUND for var_export error "Nesting level too deep - recursive dependency":
+        ob_start();
+        var_dump($__shell_retval);
+        $dataDump = ob_get_clean();
+        echo $dataDump;        
       }
       $_ = (isset($__shell_retval)) ? $__shell_retval : $_;
 
